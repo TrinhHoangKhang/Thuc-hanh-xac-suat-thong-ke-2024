@@ -36,3 +36,24 @@ apply(X, MARGIN, FUN, ...)
 X: Matrix
 MARGIN: 1->row, 2->col
 FUN: sum, mean, max, ...
+=============== If Else ===============
+if () {} else {}
+=============== For ================
+for (variable in sequence) {}
+for (i in 1:10) {print(i)}
+============== While ==============
+while (condition) {}
+============== Function =============
+my_function <- function(arg1, arg2, ...) {
+    # Code to execute
+    return(result)  # Optional
+}
+sum_2_number <- function(a, b) {
+    result <- a + b
+    return(result)
+}
+increase_2_number <- function(a, b) {
+    a <- a + 1
+    b <- b + 1
+    return(list(a, b))
+}
