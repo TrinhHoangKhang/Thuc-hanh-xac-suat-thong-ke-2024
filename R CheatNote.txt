@@ -1,0 +1,38 @@
+=============== Vector ===============
+x <- c(1, 2, 3)
+=== Sequence ===
+1:10 (Lấy 2 đầu)
+seq(1, 10)
+seq(1, 10, by=2)
+seq(1, 10, length=10)
+=== Rep ===
+# (a) Lặp số 2, 4 lần
+print(rep(2, 4))
+# (b) Lặp bộ 1, 2 bốn lần
+print(rep(c(1,2),4))
+# (c) Lặp phần tử đầu 4 lần, lặp phần tử thứ hai 4 lần
+print(rep(c(1,2),c(4,4)))
+# (d) Lặp bộ 1, 2, 4, 5 bốn lần
+print(rep(1:4,4))
+# (e) Lặp mỗi phần tử 3 lần
+print(rep(1:4,rep(3,4)))
+=============== Matrix ===============
+matrix <- (c(1, 2, 3), nrow, ncol, byrow)
+matrix <- (1:9, 3, 3)
+matrix <- (seq(1, 100, length=9), 3, 3)
+=== Subscript ===
+mat[2, 3] (Dòng 2 cột 3)
+mat[2, ] (Cả dòng 2)
+mat[, 3] (Cả cột 3)
+mat[c(1, 3), ] (Dòng 1 và 3)
+mat[1:2, 2:3] (Ma trận con)
+mat[-1, ] (Mọi dòng trừ dòng đầu)
+mat[mat > 5] (Phần tử > 5) Trả về vector
+=== Modify ===
+mat[1, 2] = 99
+mat[3, ] = c(1, 2, 3) (Thế nguyên dòng)
+=============== Apply ===============
+apply(X, MARGIN, FUN, ...)
+X: Matrix
+MARGIN: 1->row, 2->col
+FUN: sum, mean, max, ...
